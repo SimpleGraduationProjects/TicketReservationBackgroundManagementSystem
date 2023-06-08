@@ -20,7 +20,7 @@ public class search_fly extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		//get�ύΪ�Ƿ�������ֱ�ӷ��ر�session�����ҳ�漴��
+
 		HttpSession session = req.getSession();
 		String url=null;
 		if(session.getAttribute("url")!=null) {
@@ -34,13 +34,8 @@ public class search_fly extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("utf-8");
-		//HttpSession session = req.getSession();
-		String url=null;
-		/*
-		 * if(session.getAttribute("url")!=null) {
-		 * url=session.getAttribute("url").toString(); }else {
-		 */
-			url="default/index.jsp";
+
+		String url="default/index.jsp";
 		
 		String departure=null;
 		String destination=null;
@@ -48,7 +43,7 @@ public class search_fly extends HttpServlet {
 		destination=req.getParameter("destination");
 		String sql=null;
 		if(departure==""&&destination=="") {
-			//���ʼ���غ�Ŀ�ĵض�Ϊ������ת��ԭҳ��
+
 			resp.sendRedirect(url);
 		}else if (departure!=""&&destination=="") {
 			sql="select * from flight where f_s_p='"+departure+"'";
@@ -58,10 +53,10 @@ public class search_fly extends HttpServlet {
 			sql="select * from flight where f_s_p='"+departure+"' and f_e_p='"+destination+"'";
 		}
 		if(departure==""&&destination=="") {
-			//�����Ϊ�գ�ִ�в�����һ�������ԾͲ����������ˣ�����ִ��else
+
 		}else {
 			db_conn conn=new db_conn();
-			//System.out.println(sql);
+
 			ArrayList<flight> flightlist = new ArrayList<flight>();
 			flight flight_info=new flight();
 			
@@ -84,7 +79,7 @@ public class search_fly extends HttpServlet {
 			}finally {
 				conn.closeDB();
 			}
-			//resp.sendRedirect("default/search.jsp");
+
 			req.getRequestDispatcher("default/search.jsp").forward(req, resp);
 		}
 		

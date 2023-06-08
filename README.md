@@ -18,12 +18,14 @@
 > 本代码来源于网络,仅供学习参考使用,请入群(123300273)后联系群主索要sql文件!
 >
 > 提供1.远程部署/2.修改代码/3.设计文档指导/4.框架代码讲解等服务
-
->访问路径
 >
-> http://localhost:8080/jsp_plane_ticket_book/index/login_reg.jsp
+> 首页地址: http://localhost:8080/jsp_plane_ticket_book/index/login_reg.jsp
+> 
+> 用户登录: http://localhost:8080/jsp_plane_ticket_book/default/index.jsp
+> 
+> 密码 : user    admin
 >
-> http://localhost:8080/jsp_plane_ticket_book/admin/index.jsp
+> 管理员登录: http://localhost:8080/jsp_plane_ticket_book/admin/index.jsp
 >
 > 密码 : admin    admin
 

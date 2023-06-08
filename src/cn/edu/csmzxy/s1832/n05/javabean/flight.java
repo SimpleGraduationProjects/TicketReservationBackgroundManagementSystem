@@ -1,13 +1,13 @@
 package cn.edu.csmzxy.s1832.n05.javabean;
 public class flight {
-	private String f_n=null;//�����
-	private String f_s_a=null;//��ɻ���
-	private String f_a_a=null;//�������
-	private String f_d_t=null;//���ʱ��
-	private String f_a_t=null;//����ʱ��
-	private String f_f_c_p=null;//ͷ�Ȳռ۸�
-	private String f_s_c_p=null;//����ռ۸�
-	private String f_t_c_p=null;//���òռ۸�
+	private String f_n=null;
+	private String f_s_a=null;
+	private String f_a_a=null;
+	private String f_d_t=null;
+	private String f_a_t=null;
+	private String f_f_c_p=null;
+	private String f_s_c_p=null;
+	private String f_t_c_p=null;
 	
 	public String getF_n() {
 		return f_n;

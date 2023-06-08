@@ -33,7 +33,7 @@ public class get_img {
 				}
 			}
 		} catch (SQLException e) {
-			System.out.println("������Ϣ���£�"+e);
+			System.out.println("查询失败:"+e);
 			
 		}
 		return img;

@@ -17,11 +17,11 @@ public class deal_message extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.sendRedirect("default/message_board.jsp");
-		//�û��Ƿ��Ĳ�����ֱ�Ӻ��Լ���
+
 	}
 	
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		//System.out.println("dopost��������");
+
 		req.setCharacterEncoding("utf-8");
 		oDate o_date=new oDate();
 		String user_name=null;
@@ -30,14 +30,13 @@ public class deal_message extends HttpServlet {
 		user_message=req.getParameter("message").toString();
 		String getDate=o_date.get_date();
 		if(!user_name.equals("")&&!user_message.equals("")) {
-			//System.out.println("��������жϳɹ���");
+
 			db_conn conn = new db_conn();
 			String sql="insert into user_message (time,user_name,message_content) values('"+getDate+"','"+user_name+"','"+user_message+"')";
-			//System.out.println(sql);
+
 			int res=conn.executeInsert(sql);
 			System.out.println(res);
-			
-			//resp.sendRedirect("default/message_board.jsp");
+
 			conn.closeDB();
 		}
 		resp.sendRedirect("default/message_board.jsp");

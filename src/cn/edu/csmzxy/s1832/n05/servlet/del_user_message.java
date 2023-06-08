@@ -27,9 +27,9 @@ public class del_user_message extends HttpServlet {
 			db_conn conn=new db_conn();
 			
 			String sql="delete from user_message where id='"+id+"'";
-			//int res=
+
 			conn.executeDelete(sql);
-			//System.out.println(res);
+
 			resp.sendRedirect("admin/feedback_list.jsp");
 		}
 		

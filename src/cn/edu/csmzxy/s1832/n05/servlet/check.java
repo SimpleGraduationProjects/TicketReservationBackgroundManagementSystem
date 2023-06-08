@@ -23,7 +23,7 @@ public class check extends HttpServlet {
 			throws ServletException, IOException {
 			resp.setContentType("text/html;charset=utf-8");
 			PrintWriter out = resp.getWriter();
-			out.println("锟斤拷使锟斤拷默锟较凤拷式锟结交锟斤拷锟捷ｏ拷锟斤拷要锟斤拷锟皆非凤拷锟斤拷锟斤拷");
+			out.println("");
 		}
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) 
@@ -53,15 +53,15 @@ public class check extends HttpServlet {
 					session.setAttribute("admin_id", id);
 					resp.sendRedirect("frame");
 				}else {
-					System.out.println("锟斤拷锟斤拷锟斤拷锟�"+res);
+
 					resp.sendRedirect("/jsp_plane_ticket_book/admin/index.jsp");
 				}
 			}else {
-				System.out.println("锟剿号达拷锟斤拷");
+
 				resp.sendRedirect("/jsp_plane_ticket_book/admin/index.jsp");				
 			}
 		}catch(SQLException e) {
-			System.out.println("锟斤拷锟街诧拷锟斤拷预锟斤拷锟皆达拷锟襟，达拷锟斤拷锟斤拷息锟斤拷锟铰ｏ拷"+e);
+			System.out.println(e);
 		}
 	}
 	

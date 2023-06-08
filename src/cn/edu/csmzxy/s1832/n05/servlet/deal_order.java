@@ -26,14 +26,7 @@ public class deal_order extends HttpServlet{
 			String passenger_id=req.getParameter("passenger_id");
 			String contact=req.getParameter("contact");
 			String contact_phone=req.getParameter("contact_phone");
-			
-			
-			/*
-			 * System.out.println(f_i); System.out.println(passenger_name);
-			 * System.out.println(date); System.out.println(grade);
-			 * System.out.println(passenger_id); System.out.println(contact);
-			 * System.out.println(contact_phone);
-			 */
+
 			 
 			if(f_i!=""&&passenger_name!=""&&date!=""&&grade!=""&&passenger_id!=""&&contact!=""&&contact_phone!="") {
 				db_conn conn=new db_conn();

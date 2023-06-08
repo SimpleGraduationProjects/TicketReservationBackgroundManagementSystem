@@ -6,7 +6,7 @@ public class db_conn {
 	public ResultSet res = null;
 	public Statement st = null;
 	public  db_conn() {
-		String URL="jdbc:mysql://localhost:3306/graduation_plane_ticket_book?serverTimezone=UTC";
+		String URL="jdbc:mysql://localhost:3306/graduation_128_plane_ticket_book?serverTimezone=UTC";
 		String USER="root";
 		String PWD="123456";
 		
@@ -29,7 +29,7 @@ public class db_conn {
 			num=st.executeUpdate(sql);
 		}
 		catch(SQLException e){
-			System.out.println("?????????????:"+e.getMessage());
+			System.out.println("插入失败:"+e.getMessage());
 		}
 		return num;
 	}
@@ -41,7 +41,7 @@ public class db_conn {
 			res=st.executeQuery(sql);
 		}
 		catch(SQLException e){
-			System.out.print("??????????:"+e.getMessage());
+			System.out.print("查询失败:"+e.getMessage());
 		}
 		return res;
 	}
@@ -52,7 +52,7 @@ public class db_conn {
 		try{
 			num=st.executeUpdate(sql);
 		}catch(SQLException ex){
-			System.out.print("???????д???"+ex.getMessage());
+			System.out.print("更新失败:"+ex.getMessage());
 		}
 		return num;
 	}
@@ -64,7 +64,7 @@ public class db_conn {
 			num=st.executeUpdate(sql);
 		}
 		catch(SQLException e){
-			System.out.print("???????д???:"+e.getMessage());
+			System.out.print("删除失败:"+e.getMessage());
 		}
 		return num;
 	}
@@ -76,7 +76,7 @@ public class db_conn {
 			conn.close();
 		}
 		catch(Exception e){
-			System.out.print("??й??Connection?????д???:"+e.getMessage());
+			System.out.print("Connection关闭失败:"+e.getMessage());
 		}
 	}
 }
